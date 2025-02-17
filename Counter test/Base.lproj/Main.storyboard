@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Значение счетчика:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pP-DP-fFO">
+                                <rect key="frame" x="0.0" y="159.33333333333334" width="414" height="115.33333333333334"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXE-P5-4WW">
+                                <rect key="frame" x="51.666666666666657" y="528.33333333333337" width="310.66666666666674" height="92.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="filled" subtitle="" cornerStyle="capsule">
+                                    <imageReference key="image" image="plus" catalog="system" variableValue="0.0"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                    <color key="baseBackgroundColor" red="0.78000000000000003" green="0.0" blue="0.13" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plusButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heZ-hj-kQh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKa-aW-kwH">
+                                <rect key="frame" x="51.666666666666657" y="670.66666666666663" width="310.66666666666674" height="92.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system" subtitle="" cornerStyle="capsule">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="minusButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UhM-xy-9fV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWD-n6-vUJ">
+                                <rect key="frame" x="0.0" y="43.999999999999993" width="414" height="115.33333333333331"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise.circle.fill" catalog="system" subtitle="" cornerStyle="capsule">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="59"/>
+                                    <color key="baseForegroundColor" red="0.46819370985031128" green="0.4572312887578901" blue="0.46074892803486434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rasetDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvt-uR-JYB"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="История изменений:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E1A-h1-BgB">
+                                <rect key="frame" x="15" y="274.66666666666669" width="384" height="115.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RWD-n6-vUJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="14S-mo-S5z"/>
+                            <constraint firstItem="E1A-h1-BgB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4lm-mM-f9c"/>
+                            <constraint firstItem="E1A-h1-BgB" firstAttribute="top" secondItem="7pP-DP-fFO" secondAttribute="bottom" id="5AE-w3-0Sy"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.75" id="63s-Ou-jeJ"/>
+                            <constraint firstItem="7pP-DP-fFO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lj-QI-B8E"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRe-Tt-mTA"/>
+                            <constraint firstItem="RWD-n6-vUJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bub-nq-s33"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TKa-aW-kwH" secondAttribute="bottom" constant="50" id="Og5-fl-vdw"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.12" id="RDC-5b-mTr"/>
+                            <constraint firstItem="7pP-DP-fFO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vrr-7Y-fOE"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="height" secondItem="WXE-P5-4WW" secondAttribute="height" id="W7d-ir-dA1"/>
+                            <constraint firstItem="RWD-n6-vUJ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="cZO-zM-WtD"/>
+                            <constraint firstItem="E1A-h1-BgB" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="dmb-fJ-7uD"/>
+                            <constraint firstItem="RWD-n6-vUJ" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="ePw-f9-qAi"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="width" secondItem="WXE-P5-4WW" secondAttribute="width" id="gR4-Hi-QhE"/>
+                            <constraint firstItem="TKa-aW-kwH" firstAttribute="top" secondItem="WXE-P5-4WW" secondAttribute="bottom" constant="50" id="jSY-IM-YVT"/>
+                            <constraint firstItem="WXE-P5-4WW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mYv-JK-Xvh"/>
+                            <constraint firstItem="E1A-h1-BgB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="tUS-Ga-Ew3"/>
+                            <constraint firstItem="7pP-DP-fFO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="vIe-Xd-ltq"/>
+                            <constraint firstItem="7pP-DP-fFO" firstAttribute="top" secondItem="RWD-n6-vUJ" secondAttribute="bottom" id="w3Q-fb-29Q"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="historyChange" destination="E1A-h1-BgB" id="xep-GJ-eev"/>
+                        <outlet property="labelCounter" destination="7pP-DP-fFO" id="FWk-Ul-dqL"/>
+                        <outlet property="minusButton" destination="TKa-aW-kwH" id="Wzd-kg-l5B"/>
+                        <outlet property="plusButton" destination="WXE-P5-4WW" id="jaD-Ft-dZ3"/>
+                        <outlet property="resetButton" destination="RWD-n6-vUJ" id="Pud-km-dam"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.091603053435115" y="2.8169014084507045"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
